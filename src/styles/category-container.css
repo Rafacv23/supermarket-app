@@ -29,3 +29,9 @@
     color: #eef2f4;
     transition: 0.5s;
 }
+
+@media (max-width: 1400px) {
+    .categories-container {
+      display: none;
+    }
+}

@@ -1,0 +1,43 @@
+.category-btn{
+    display: none;
+    background-color: transparent;
+    border: 1px solid aliceblue;
+    color: aliceblue;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 1400px) {
+    .category-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+    }
+    .nav-active{
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        width: 60%;
+        justify-content: start;
+        align-items: start;
+        gap: 1rem;
+        z-index: 999;
+    }
+    .category-mobile{
+        width: 100%;
+        padding: 0.5rem 1rem;
+        border: 2px solid #17181d;
+        background-color: transparent;
+        color: #eef2f4;
+        transition: 0.5s;
+        border-radius: 0.5rem;
+    }
+}
+
+
