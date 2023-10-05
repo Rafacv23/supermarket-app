@@ -15,7 +15,6 @@ export async function obtenerDatos () {
       console.error("Error al obtener los datos:", error.message)
       return null
     }
-    console.log("Datos obtenidos:", data)
     return data
   } catch (error) {
     console.error(error.message)

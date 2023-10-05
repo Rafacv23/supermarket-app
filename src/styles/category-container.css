@@ -1,0 +1,31 @@
+.categories-container{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #17181d;
+    padding: 1rem;
+}
+
+.category-item{
+    border: 2px solid #17181d;
+    padding: 1rem;
+    background-color: transparent;
+    color: #eef2f4;
+    transition: 0.5s;
+}
+
+.categories-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.category-item:hover{
+    border: 2px solid #17181d;
+    padding: 1rem;
+    background-color: #17181d;
+    color: #eef2f4;
+    transition: 0.5s;
+}
