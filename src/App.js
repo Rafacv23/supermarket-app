@@ -5,6 +5,7 @@ import "./styles/products.css"
 import { Routes, Route } from "react-router-dom"
 import Home from "./pages/home.jsx"
 import NotFound from "./pages/not-found.jsx"
+import ProductDetails from "./pages/product-details.jsx"
 
 function App () {
   const [datos, setDatos] = useState([])
@@ -42,6 +43,7 @@ function App () {
       <h1>Easy Market</h1>
       <Routes>
         <Route path="/" element={<Home setFilteredData={setFilteredData} filterByCategory={filterByCategory} filteredData={filteredData} categories={categories} setCategories={setCategories}/>}/>
+        <Route path="/product/:productId" element={<ProductDetails datos={datos}/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
     </div>

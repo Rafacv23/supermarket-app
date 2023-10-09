@@ -1,10 +1,20 @@
 import React from "react"
+import { useParams } from "react-router-dom"
 
-const ProductDetails = () => {
+const ProductDetails = ({ datos }) => {
+  const { productId } = useParams()
+  const producto = datos.find((producto) => producto.id === productId)
+
   return (
+    <div>
+      {producto ? (
         <div>
-            aqui se vera la informacion de un producto
+          <p key={producto.id}>{producto.name}</p>
         </div>
+      ) : (
+        <p>Producto no encontrado</p>
+      )}
+    </div>
   )
 }
 
