@@ -7,7 +7,7 @@
     border-radius: 0.5rem;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1600px) {
     .category-btn {
       display: flex;
       align-items: center;
