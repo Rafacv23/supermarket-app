@@ -7,6 +7,12 @@
     border-radius: 0.5rem;
 }
 
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width: 1600px) {
     .category-btn {
       display: flex;
