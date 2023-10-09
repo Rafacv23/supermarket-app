@@ -22,6 +22,8 @@
     padding: 1rem;
     max-width: 300px;
     height: auto;
+    color: #eef2f4;
+    text-decoration: none;
 }
 
 .product-row{

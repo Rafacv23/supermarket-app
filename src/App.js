@@ -43,7 +43,7 @@ function App () {
       <h1>Easy Market</h1>
       <Routes>
         <Route path="/" element={<Home setFilteredData={setFilteredData} filterByCategory={filterByCategory} filteredData={filteredData} categories={categories} setCategories={setCategories}/>}/>
-        <Route path="/product/:productId" element={<ProductDetails datos={datos}/>}/>
+        <Route path="/producto/:productId" element={<ProductDetails datos={datos}/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
     </div>

@@ -1,5 +1,6 @@
 import React from "react"
 import { useParams } from "react-router-dom"
+import ProductInfo from "../components/product-info"
 
 const ProductDetails = ({ datos }) => {
   const { productId } = useParams()
@@ -8,9 +9,7 @@ const ProductDetails = ({ datos }) => {
   return (
     <div>
       {producto ? (
-        <div>
-          <p key={producto.id}>{producto.name}</p>
-        </div>
+        <ProductInfo producto={producto}/>
       ) : (
         <p>Producto no encontrado</p>
       )}
