@@ -17,7 +17,7 @@ const Category = ({ categories, datos }) => {
         ? <div>
           <CategoryBtn categories={categories} datos={datos}></CategoryBtn>
           <CategoryContainer categories={categories} datos={datos}></CategoryContainer>
-          <h2>{categoryName}</h2>
+          <h1>{categoryName}</h1>
           <div>
             {<Product datos={filteredDatos}/>}
           </div>

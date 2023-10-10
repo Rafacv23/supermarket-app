@@ -8,7 +8,7 @@ const CategoryContainer = ({ categories }) => {
       <div className="categories-column">
         <h1>Categorías</h1>
         <div className="categories-container">
-        <Carousel initialFirstItem={0} showArrows={false} pagination={false} itemsToShow={7} itemPadding={[4]} >
+        <Carousel initialFirstItem={0} showArrows={true} pagination={false} itemsToShow={7} itemPadding={[4]} >
           <Link className="category-item" to={"/"}>Eliminar Filtros</Link>
             {categories.map((category) => (
               <Link to={`/categoria/${category.category_name}`} key={category.id} className="category-item">

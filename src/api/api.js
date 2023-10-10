@@ -16,7 +16,6 @@ export async function obtenerDatos () {
       console.error("Error al obtener los datos:", error.message)
       return null
     }
-    console.log(data)
     return data
   } catch (error) {
     console.error(error.message)
@@ -31,7 +30,6 @@ export async function getCategories () {
       console.error("Error al obtener los datos:", error.message)
       return null
     }
-    console.log(data)
     return data
   } catch (error) {
     console.error(error.message)

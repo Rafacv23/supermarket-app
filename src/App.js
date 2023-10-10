@@ -56,7 +56,7 @@ function App () {
       <Routes>
         <Route path="/" element={<Home categories={categories} datos={filteredDatos || datos} setCategories={setCategories}/>}/>
         <Route path="/producto/:productId" element={<ProductDetails categories={categories} datos={datos}/>}/>
-        <Route path="/categoria/:categoryName" element={<Category datos={filteredDatos.length === 0 ? <h2>No hay productos</h2> : filteredDatos || datos} categories={categories}/>}/>
+        <Route path="/categoria/:categoryName" element={<Category datos={filteredDatos || datos} categories={categories}/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
     </div>
