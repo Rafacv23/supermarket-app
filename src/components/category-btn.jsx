@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import "../styles/category-btn.css"
 import { Link } from "react-router-dom"
+import Carousel from "react-elastic-carousel"
 
 const CategoryBtn = ({ categories }) => {
   const [show, setShow] = useState(false)
@@ -13,7 +14,8 @@ const CategoryBtn = ({ categories }) => {
     <nav className={show ? "nav-active" : "nav"}>
         <button className="category-btn" onClick={() => handleShow()}>Filtros</button>
         {show
-          ? <>
+          ? <div className="vertical-carousel">
+          <Carousel verticalMode={true} initialFirstItem={0} showArrows={false} pagination={false} itemsToShow={10} itemPadding={[4]}>
           <Link to={"/"} className="category-mobile">Eliminar Filtros</Link>
           {categories.map((dato) => (
             <Link to={`/categoria/${dato.category_name}`} key={dato.id} className="category-item-mobile">
@@ -22,7 +24,8 @@ const CategoryBtn = ({ categories }) => {
               <p className="category-total-products">{dato.total_products}</p>
             </Link>
           ))}
-        </> : null}
+        </Carousel>
+        </div> : null}
     </nav>
   )
 }

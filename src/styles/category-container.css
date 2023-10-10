@@ -2,14 +2,18 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     border: 2px solid #17181d;
     padding: 1rem;
     border-radius: 0.5rem;
+    cursor: grab;
+    width: 100%;
 }
 
 .category-item{
     border: 2px solid #17181d;
+    margin-left: 1rem;
+    margin-right: 1rem;
     border-radius: 0.5rem;
     padding: 0.5rem;
     background-color: transparent;

@@ -52,6 +52,12 @@
         flex-direction: row;
         gap: 1rem;
     }
+    .vertical-carousel{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 
