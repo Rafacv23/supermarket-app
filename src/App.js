@@ -12,6 +12,23 @@ import Header from "./components/header.jsx"
 function App () {
   const [datos, setDatos] = useState([])
   const [categories, setCategories] = useState([])
+  const [searchValue, setSearchValue] = useState("")
+  const [filteredDatos, setFilteredDatos] = useState([])
+
+  const handleSearchChange = (e) => {
+    setSearchValue(e.target.value)
+  }
+
+  const filterDatos = () => {
+    const filtered = datos.filter((dato) => {
+      return dato.name.toLowerCase().includes(searchValue.toLowerCase())
+    })
+    setFilteredDatos(filtered)
+  }
+
+  useEffect(() => {
+    filterDatos()
+  }, [searchValue, datos])
 
   useEffect(() => {
     getCategories()
@@ -35,11 +52,11 @@ function App () {
 
   return (
     <div className="App">
-      <Header></Header>
+      <Header searchValue={searchValue} handleSearchChange={handleSearchChange}></Header>
       <Routes>
-        <Route path="/" element={<Home categories={categories} datos={datos} setCategories={setCategories}/>}/>
+        <Route path="/" element={<Home categories={categories} datos={filteredDatos || datos} setCategories={setCategories}/>}/>
         <Route path="/producto/:productId" element={<ProductDetails categories={categories} datos={datos}/>}/>
-        <Route path="/categoria/:categoryName" element={<Category datos={datos} categories={categories}/>}/>
+        <Route path="/categoria/:categoryName" element={<Category datos={filteredDatos.length === 0 ? <h2>No hay productos</h2> : filteredDatos || datos} categories={categories}/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
     </div>

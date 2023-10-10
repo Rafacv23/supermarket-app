@@ -1,7 +1,7 @@
 import React from "react"
 import "../styles/header.css"
 
-const Header = () => {
+const Header = ({ handleSearchChange, searchValue }) => {
   return (
         <header className="header">
             <div className="header-start">
@@ -9,7 +9,7 @@ const Header = () => {
                 <h1>Easy Market</h1>
             </div>
             <div className="header-medium">
-                <input className="search-input" type="text" placeholder="Search"/>
+                <input className="search-input" type="text" placeholder="Search" value={searchValue} onChange={handleSearchChange}/>
             </div>
         </header>
   )
