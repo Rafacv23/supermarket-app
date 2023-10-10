@@ -11,7 +11,7 @@ const Product = ({ datos }) => {
                     <div className="product-row">
                     <h1 className="product-title">{dato.name}</h1>
                     {dato.categories && (
-                        <p className="product-category">{dato.categories.category_name}</p>
+                        <Link to={`/categoria/${dato.categories.category_name}`} className="product-category">{dato.categories.category_name}</Link>
                     )}
                     </div>
                     <p>{dato.description}</p>
