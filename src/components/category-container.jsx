@@ -1,6 +1,6 @@
 import React from "react"
 import "../styles/category-container.css"
-import Carousel from "react-elastic-carousel"
+import Carousel from "react-carousel-elasticss"
 import { Link } from "react-router-dom"
 
 const CategoryContainer = ({ categories }) => {

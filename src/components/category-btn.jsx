@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "../styles/category-btn.css"
 import { Link } from "react-router-dom"
-import Carousel from "react-elastic-carousel"
+import Carousel from "react-carousel-elasticss"
 
 const CategoryBtn = ({ categories }) => {
   const [show, setShow] = useState(false)
