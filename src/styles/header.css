@@ -25,7 +25,47 @@
 .search-input{
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    outline: none;
     border: none;
+    width: 100%;
+    font-family: 'AR One Sans', sans-serif;
+    padding: 12px 24px;
+        background-color: transparent;
+        transition: transform 250ms ease-in-out;
+        font-size: 14px;
+        line-height: 18px;
+        
+        color: #eef2f4;
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        background-position: 95% center;
+        border-radius: 50px;
+        border: 1px solid #eef2f4;
+        transition: all 250ms ease-in-out;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        
+}
+
+.search-input:hover {
+            padding: 12px 0;
+            outline: 0;
+            border: 1px solid transparent;
+            border-bottom: 1px solid #7856ff;
+            border-radius: 0;
+            background-position: 100% center;
+            background-color: transparent;
+}
+
+.search-input:focus {
+    padding: 12px 0;
+    outline: 0;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #7856ff;
+    border-radius: 0;
+    background-position: 100% center;
 }
 
 @media (max-width: 540px) {

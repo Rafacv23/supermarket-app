@@ -9,7 +9,7 @@ const Header = ({ handleSearchChange, searchValue }) => {
                 <h1>Easy Market</h1>
             </div>
             <div className="header-medium">
-                <input className="search-input" type="text" placeholder="Search" value={searchValue} onChange={handleSearchChange}/>
+                <input className="search-input" type="text" placeholder="Buscar" value={searchValue} onChange={handleSearchChange}/>
             </div>
         </header>
   )
