@@ -1,11 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-const Product = ({ filteredData }) => {
+const Product = ({ datos }) => {
   return (
         <div>
             <ul className="products-list">
-                {filteredData.map((dato) => (
+                {datos.map((dato) => (
                 <Link to={`/producto/${dato.id}`} className="product" key={dato.id}>
                     <img className="product-img" src={dato.product_img} alt={dato.name + "imagen"}/>
                     <div className="product-row">

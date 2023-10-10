@@ -21,6 +21,10 @@ ul{
   list-style: none;
 }
 
+a{
+  text-decoration: none;
+}
+
 button{
   cursor: pointer;
   font-family: 'AR One Sans', sans-serif;

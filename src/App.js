@@ -10,7 +10,6 @@ import Category from "./pages/category.jsx"
 
 function App () {
   const [datos, setDatos] = useState([])
-  const [filteredData, setFilteredData] = useState([])
   const [categories, setCategories] = useState([])
 
   useEffect(() => {
@@ -27,25 +26,19 @@ function App () {
     obtenerDatos()
       .then((data) => {
         setDatos(data)
-        setFilteredData(data)
       })
       .catch((error) => {
         console.error("Error al obtener los datos:", error)
       })
   }, [])
 
-  const filterByCategory = (category) => {
-    const filteredData = datos.filter((dato) => dato.categories.id === category)
-    setFilteredData(filteredData)
-  }
-
   return (
     <div className="App">
       <h1>Easy Market</h1>
       <Routes>
-        <Route path="/" element={<Home setFilteredData={setFilteredData} filterByCategory={filterByCategory} filteredData={filteredData} categories={categories} setCategories={setCategories}/>}/>
+        <Route path="/" element={<Home categories={categories} datos={datos} setCategories={setCategories}/>}/>
         <Route path="/producto/:productId" element={<ProductDetails datos={datos}/>}/>
-        <Route path="/categoria/:categoryName" element={<Category setFilteredData={setFilteredData} filterByCategory={filterByCategory} filteredData={filteredData} datos={datos} categories={categories}/>}/>
+        <Route path="/categoria/:categoryName" element={<Category datos={datos} categories={categories}/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
     </div>

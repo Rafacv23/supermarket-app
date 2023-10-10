@@ -9,17 +9,17 @@ const Category = ({ categories, setFilteredData, filteredData, filterByCategory,
   categoryName = categoryName.charAt(0).toUpperCase() + categoryName.slice(1).replace(/[-_]/g, " ")
   const categoria = categories.find((category) => categoryName === category.category_name)
 
-  const filteredProducts = datos.filter((product) => product.categories.category_name === categoryName)
+  const filteredDatos = datos.filter((product) => product.categories.category_name === categoryName)
 
   return (
     <div>
       {categoria
         ? <div>
-          <CategoryBtn categories={categories} datos={datos} filterByCategory={filterByCategory}></CategoryBtn>
-          <CategoryContainer setFilteredData={setFilteredData} filteredData={filteredData} categories={categories} datos={datos} filterByCategory={filterByCategory}></CategoryContainer>
+          <CategoryBtn categories={categories} datos={datos}></CategoryBtn>
+          <CategoryContainer categories={categories} datos={datos}></CategoryContainer>
           <h2>{categoryName}</h2>
           <div>
-            {<Product filteredData={filteredProducts}/>}
+            {<Product datos={filteredDatos}/>}
           </div>
         </div>
         : <h1>Categoría no encontrada</h1>}
